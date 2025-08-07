@@ -192,7 +192,7 @@ body {
 	border: 1px solid #8ab92d;
 	font-size: 15px;
 	color: #272529;
-	font-family: cursive;
+	font-family: inherit;
 	text-decoration: none;
 }
 
@@ -450,6 +450,18 @@ footer .social-media a {
   margin-right: 10px;
   font-size: 22px;
   text-decoration: none;
+  display: inline-block;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.social-media a img {
+  width: 30px; /* Set consistent size */
+  height: 30px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.social-media a:hover img {
+  transform: scale(1.2); /* Slight zoom */
+  filter: brightness(1.2) drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2)); /* Glow */
+  cursor: pointer;
 }
 footer .right-col h1 {
   font-size: 26px;

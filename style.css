@@ -325,7 +325,7 @@ button {
 }
 .smbox .data {
   font-size: 80px;
-  color: #a1c55a;
+  color: #8ab92d;
 }
 .smbox .det {
   font-size: 20px;
@@ -407,14 +407,14 @@ button {
   width: 250px;
   padding: 28px;
   border-radius: 10px;
-  border: 1px solid #a1c55a;
+  border: 1px solid #8ab92d;
   font-size: 15px;
   color: #272529;
-  font-family: cursive;
+  font-family: inherit;
   text-decoration: none;
 }
 .cbox .det a:hover {
-  background: linear-gradient(to right, #a1c55a, #8ab92d);
+  background: linear-gradient(to right, #8ab92d, #8ab92d);
   color: white;
 }
 .cbox .det a:hover img {
@@ -473,12 +473,13 @@ button {
 #detail p {
   font-size: 15px;
   line-height: 25px;
-  font-variant: small-caps;
+  font-family: inherit;
   text-align: center;
   margin: 25px;
   margin-bottom: 0px;
   margin-top: 0px;
 }
+
 #detail button {
   outline: none;
   border-radius: 10px;
@@ -499,6 +500,7 @@ button {
 .btn-rishav:hover {
   background: #8ab92d ;
   color: #fff;
+  font-family: inherit;
 }
 .card-title {
   font-size: 17px;
@@ -507,7 +509,6 @@ button {
   font-weight: 700;
 }
 
-/*Service Section*/
 /*Service Section*/
 .service-swipe {
   display: flex;
@@ -552,7 +553,7 @@ button {
 
 /*Contact Us Section*/
 .csec {
-  background: linear-gradient(to right, #a1c55a, #8ab92d);
+  background: linear-gradient(to right, #8ab92d, #8ab92d);
   background-attachment: fixed;
   position: absolute;
   width: 100%;
@@ -579,6 +580,7 @@ button {
   box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.4);
   background: #fff;
 }
+
 .cc form {
   margin: 5%;
   margin-top: 40px;
@@ -586,7 +588,6 @@ button {
   height: 90%;
 }
 .cc form label {
-  position: absolute;
   color: #2e3d49;
   font-size: 10px;
   font-weight: 800;
@@ -615,9 +616,10 @@ form textarea {
   font-weight: 600;
   padding: 15px;
 }
+
 #csubmit {
   margin-top: 20px;
-  background: linear-gradient(to right, #a1c55a, #8ab92d);
+  background: linear-gradient(to right, #8ab92d, #8ab92d);
   border-radius: 5px;
   border-style: none;
   outline: none;
@@ -773,6 +775,7 @@ form textarea {
   margin-bottom: 15px;
   width: 50%;
 }
+
 .feed form .fname {
   width: 25%;
 }
@@ -782,7 +785,7 @@ form textarea {
 }
 .feed #csubmit {
   margin-top: 25px;
-  background: linear-gradient(to right, #a1c55a, #8ab92d);
+  background: linear-gradient(to right, #8ab92d, #8ab92d);
   border-radius: 5px;
   border-style: none;
   outline: none;
@@ -828,6 +831,18 @@ footer .social-media a {
   margin-right: 10px;
   font-size: 22px;
   text-decoration: none;
+  display: inline-block;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.social-media a img {
+  width: 30px; /* Set consistent size */
+  height: 30px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.social-media a:hover img {
+  transform: scale(1.2); /* Slight zoom */
+  filter: brightness(1.2) drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2)); /* Glow */
+  cursor: pointer;
 }
 footer .right-col h1 {
   font-size: 26px;
@@ -852,7 +867,7 @@ footer .right-col h1 {
 footer .border {
   width: 100px;
   height: 4px;
-  background: linear-gradient(to right, #a1c55a, #8ab92d);
+  background: linear-gradient(to right, #8ab92d, #8ab92d);
   margin: 2px;
 }
 footer .newsletter-form {
@@ -882,7 +897,7 @@ footer .btn {
   padding: 18px 40px;
   font-size: 16px;
   color: #f1f1f1;
-  background: linear-gradient(to right, #a1c55a, #8ab92d);
+  background: linear-gradient(to right, #8ab92d, #8ab92d);
   border: none;
   font-weight: 700;
   outline: none;

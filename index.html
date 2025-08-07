@@ -95,7 +95,7 @@
         <div class="cbox">
           <div class="det">
             <a href="subjects/jee.html"
-              ><img src="images/courses/books.png" />JEE Preparation</a
+              ><img src="images/courses/books.png" />JEE Prepration</a
             >
           </div>
           <div class="det">
@@ -217,7 +217,7 @@
 				<center><img src="images/creator/rishav.JPG"></center>
 				<center><div class="card-title">Rishav Kumar</div>
 				<div id="detail">
-					<p>“ You can teach a student a lesson for a day; but if you can teach him to learn by creating curiosity, he will continue the learning process as long as he lives “</p>
+					<p>“You can teach a student a lesson for a day; but if you can teach him to learn by creating curiosity, he will continue the learning process as long as he lives"</p>
 					<div class="duty"></div>
 					<a href="#" target="_blank"><button class="btn-rishav">Follow +</button></a>
 				</div>
@@ -227,7 +227,7 @@
 				<center><img src="images/creator/shashwat.png"></center>
 				<center><div class="card-title">Shashwat Kapoor</div>
 				<div id="detail">
-      		<p>“ Real education should consist of drawing the goodness and the best out of our own students. What better books can there be than the book of humanity “</p>
+      		<p>“Real education should consist of drawing the goodness and the best out of our own students. What better books can there be than the book of humanity"</p>
 					<div class="duty"></div>
 					<a href="#" target="_blank"><button class="btn-rishav">Follow +</button></a>
 				</div>
@@ -404,28 +404,54 @@
     </div>
 
     <!-- CONTACT US -->
-    <div class="diffSection" id="contactus_section">
-      <center><p style="font-size: 50px; padding: 100px">Contact Us</p></center>
-      <div class="csec"></div>
-      <div class="back-contact">
-        <div class="cc">
-          <form action="mailto:rishabhverma0484@gmail.com" method="post" enctype="text/plain">
-            <label>First Name <span class="imp">*</span></label ><label style="margin-left: 185px">Last Name <span class="imp">*</span></label><br />
-            <center>
-              <input type="text" name="" style="margin-right: 10px; width: 175px"required="required"/>
-              <input type="text" name="lname" style="width: 175px" required="required"/><br />
-            </center>
-            <label>Email <span class="imp">*</span></label><br />
-            <input type="email" name="mail" style="width: 100%" required="required"/><br />
-            <label>Message <span class="imp">*</span></label><br />
-            <input type="text" name="message" style="width: 100%" required="required"/><br />
-            <label>Additional Details</label><br />
-            <textarea name="addtional"></textarea><br />
-            <button type="submit" id="csubmit">Send Message</button>
-          </form>
+<div class="diffSection" id="contactus_section">
+  <center>
+    <p style="font-size: 50px; padding: 100px">Contact Us</p>
+  </center>
+
+  <div class="csec"></div>
+
+  <div class="back-contact">
+    <div class="cc">
+      <form action="mailto:rishabhverma0484@gmail.com" method="post" enctype="text/plain">
+        
+        <!-- Name Row -->
+        <div class="name-row">
+          <div class="form-group">
+            <label>First Name <span class="imp">*</span></label>
+            <input type="text" name="fname" required />
+          </div>
+          <div class="form-group">
+            <label>Last Name <span class="imp">*</span></label>
+            <input type="text" name="lname" required />
+          </div>
         </div>
-      </div>
+
+        <!-- Email -->
+        <div class="form-group full">
+          <label>Email <span class="imp">*</span></label>
+          <input type="email" name="mail" style="width: 65%;" required />
+        </div>
+
+        <!-- Message -->
+        <div class="form-group full">
+          <label>Message <span class="imp">*</span></label>
+          <input type="text" name="message" style="width: 60%;" required />
+        </div>
+
+        <!-- Additional -->
+        <div class="form-group full">
+          <label>Additional Details</label>
+          <textarea name="additional"></textarea>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" id="csubmit">Send Message</button>
+      </form>
     </div>
+  </div>
+</div>
+
 
     <!-- FEEDBACK -->
     <div class="title2" id="feedBACK">
