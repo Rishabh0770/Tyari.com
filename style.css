@@ -914,6 +914,17 @@ button {
   box-shadow: 0 0 50px rgba(255, 255, 255, 0.8);
   transform: translateY(-10px);
 }
+/* Center service cards on mobile screens (max-width: 768px) */
+@media only screen and (max-width: 768px) {
+  .service-swipe {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-swipe a {
+    margin: 10px 10px;
+  }
+}
 
 /*Contact Us Section*/
 .csec {
