@@ -140,8 +140,6 @@ button {
   justify-content: space-around;
 }
 
-
-
 @media (max-width: 768px) {
   .head-container {
     margin-top: 125px !important;
@@ -179,13 +177,13 @@ button {
   line-height: 1.3;
   color: #000;
   max-width: 100%;
-  white-space: nowrap; /* 👈 forces one line */
+  white-space: nowrap; 
   overflow: hidden;
-  text-overflow: ellipsis; /* 👈 optional: adds ... if text overflows */
+  text-overflow: ellipsis; /* optional: adds ... if text overflows */
 }
 
 .highlight-text {
-  color: #8ab92d; /* Brand theme color */
+  color: #8ab92d; 
 }
 
 /* Tablet */
@@ -202,8 +200,6 @@ button {
   }
 }
 
-
-/* ------------------------ SVG Image ------------------------ */
 .svg-image img {
   width: 500px;
   filter: drop-shadow(0 20px 10px rgba(0, 0, 0, 0.2));
@@ -289,6 +285,63 @@ button {
 .user img,
 .user p {
   opacity: 1;
+}
+
+/*Quick Links*/
+.course {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cbox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.cbox .det {
+  height: auto;
+  margin: 10px;
+  background: #fff;
+  cursor: pointer;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+  min-width: 200px;
+  max-width: 250px;
+}
+
+.cbox .det a {
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 50px;
+  border: 1px solid #8ab92d;
+  font-size: 15px;
+  color: #272529;
+  font-family: inherit;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cbox .det a:hover {
+  background: linear-gradient(to right, #8ab92d, #8ab92d);
+  color: white;
+}
+
+.inbt {
+	padding: 10px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 30px;
+	color: #2E3D49;
+	margin: 100px;
+	margin-bottom: 50px;
 }
 
 /*Common things in all sections*/
