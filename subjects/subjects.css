@@ -149,15 +149,10 @@ body {
 
 /*TITLE*/
 .title {
-	margin-top: 150px;
+	margin-top: 0px;
 	margin-left: 100px;
 }
-.title span{
-	font-weight: 700;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 60px;
-	color: #2E3D49;
-}
+
 .title .shortdesc {
 	padding: 10px;
 	font-family: 'Open Sans', sans-serif;
