@@ -133,11 +133,19 @@ button {
 
 /* ---------------------- Head Container ---------------------- */
 .head-container {
-  margin-top: 245px;
+  margin-top: 200px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
+}
+
+
+
+@media (max-width: 768px) {
+  .head-container {
+    margin-top: 125px !important;
+  }
 }
 
 .quote {
@@ -165,74 +173,35 @@ button {
   line-height: 20px;
 }
 
-
-/* ------------------------ Main Heading ------------------------ */
 .hero-heading {
-  display: inline-flex;
-  align-items: center;
-  flex-wrap: wrap;
   font-size: 2rem;
   font-weight: bold;
-  color: #000000;
   line-height: 1.3;
+  color: #000;
   max-width: 100%;
-  gap: 2px;
-}
-
-/* ------------------------ Typewriter ------------------------ */
-.typewriter {
-  font-weight: bold;
-  color: #8ab92d;
-  border-right: 2px solid #8ab92d;
-  white-space: nowrap;
+  white-space: nowrap; /* 👈 forces one line */
   overflow: hidden;
-  display: inline-block;
-  animation: blinkCursor 0.7s infinite;
-  vertical-align: middle;
-  font-size: inherit;
-  min-width: auto;
-  max-width: 100%;
-  margin-left: 2px;
+  text-overflow: ellipsis; /* 👈 optional: adds ... if text overflows */
 }
 
-/* ------------------------ Cursor Animation ------------------------ */
-@keyframes blinkCursor {
-  from { border-right-color: #8ab92d; }
-  to { border-right-color: transparent; }
+.highlight-text {
+  color: #8ab92d; /* Brand theme color */
 }
 
-/* ------------------------ Tablet ------------------------ */
+/* Tablet */
 @media (max-width: 768px) {
   .hero-heading {
-    font-size: 1.3rem;
-    line-height: 1.3;
-    gap: 0px;
-    justify-content: center;
-  }
-
-  .typewriter {
-    border-right: 1.5px solid #8ab92d;
-    margin-left: 0.2px;
+    font-size: 1.4rem;
   }
 }
 
-/* ------------------------ Mobile ------------------------ */
+/* Mobile */
 @media (max-width: 480px) {
   .hero-heading {
     font-size: 1.1rem;
-    line-height: 1.2;
-    gap: 0px;
-    text-align: center;
-    justify-content: center;
-  }
-
-  .typewriter {
-    border-right: 1px solid #8ab92d;
-    margin-left: 0px;
-    padding-left: 1px;
-    gap: 0px;
   }
 }
+
 
 /* ------------------------ SVG Image ------------------------ */
 .svg-image img {

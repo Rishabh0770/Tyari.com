@@ -57,11 +57,14 @@
           <h4>With India's #1 Learning App</h4>
           <h5>
             Join us in the journey of knowledge where learning today empowers you to become a leader of tomorrow. Our platform offers high-quality resources to help you succeed in every step of your career.
-          </h5>
+          </h5> <br>
          
   <h1 class="hero-heading">
-  <span class="static-text">Learning Today </span><span class="typewriter" id="typewriter"></span>
+  <span class="static-text">Learning Today</span>&nbsp;
+  <span class="highlight-text">Leading Tomorrow</span>
 </h1>
+
+
 
         </div>
         <div class="svg-image">
@@ -528,45 +531,5 @@
 	   Developed & designed By- <span class="rishav-name">Rishav Kumar</span> | All Rights Reserved.</p>
 
     </footer>
-    
-    <script>
-  // === Typewriter Text Configuration ===
-  const words = ["Leading Tomorrow", "Success Tomorrow", "Earning Tomorrow"];
-  let wordIndex = 0;
-  let charIndex = 0;
-  let isDeleting = false;
-
-  const typingSpeed = 100;
-  const erasingSpeed = 30;
-  const pauseAfterTyping = 1000;
-  const pauseAfterDeleting = 500;
-
-  const typewriter = document.getElementById("typewriter");
-
-  function typeEffect() {
-    const currentWord = words[wordIndex];
-
-    if (isDeleting) {
-      charIndex--;
-    } else {
-      charIndex++;
-    }
-
-    typewriter.textContent = currentWord.substring(0, charIndex);
-
-    if (!isDeleting && charIndex === currentWord.length) {
-      isDeleting = true;
-      setTimeout(typeEffect, pauseAfterTyping);
-    } else if (isDeleting && charIndex === 0) {
-      isDeleting = false;
-      wordIndex = (wordIndex + 1) % words.length;
-      setTimeout(typeEffect, pauseAfterDeleting);
-    } else {
-      setTimeout(typeEffect, isDeleting ? erasingSpeed : typingSpeed);
-    }
-  }
-
-  document.addEventListener("DOMContentLoaded", typeEffect);
-</script>
   </body>
 </html>
