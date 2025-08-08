@@ -166,7 +166,20 @@ button {
 }
 
 
-/* ------------------------ Typewriter Effect ------------------------ */
+/* ------------------------ Main Heading ------------------------ */
+.hero-heading {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000000;
+  line-height: 1.3;
+  max-width: 100%;
+  gap: 2px;
+}
+
+/* ------------------------ Typewriter ------------------------ */
 .typewriter {
   font-weight: bold;
   color: #8ab92d;
@@ -176,69 +189,48 @@ button {
   display: inline-block;
   animation: blinkCursor 0.7s infinite;
   vertical-align: middle;
-  min-width: 180px;
+  font-size: inherit;
+  min-width: auto;
   max-width: 100%;
-  box-sizing: border-box;
+  margin-left: 2px;
 }
 
-/* Cursor blink animation */
+/* ------------------------ Cursor Animation ------------------------ */
 @keyframes blinkCursor {
   from { border-right-color: #8ab92d; }
   to { border-right-color: transparent; }
 }
 
-.hero-heading {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 4px;
-  font-size: 2rem;
-  font-weight: bold;
-  color: #000000;
-  line-height: 1.3;
-  max-width: 100%;
-}
-
-/* ------------------------ Responsive: Tablet & Mobile ------------------------ */
+/* ------------------------ Tablet ------------------------ */
 @media (max-width: 768px) {
   .hero-heading {
-    font-size: 1.4rem;
-    line-height: 1.4;
-    gap: 2px;
-    justify-content: flex-start;
-    white-space: normal;
+    font-size: 1.3rem;
+    line-height: 1.3;
+    gap: 0px;
+    justify-content: center;
   }
 
   .typewriter {
-    font-size: 1.3rem;
-    min-width: 140px;
-    max-width: 100%;
-    border-right: 1.3px solid #8ab92d;
-    margin-left: 2px;
-  }
-
-  .play {
-    text-align: center;
-    padding: 10px;
+    border-right: 1.5px solid #8ab92d;
+    margin-left: 0.2px;
   }
 }
 
+/* ------------------------ Mobile ------------------------ */
 @media (max-width: 480px) {
   .hero-heading {
-    font-size: 1.2rem;
-    gap: 1px;
-    max-width: 100%;
-    white-space: normal;
+    font-size: 1.1rem;
     line-height: 1.2;
+    gap: 0px;
+    text-align: center;
+    justify-content: center;
   }
 
   .typewriter {
-    font-size: 1.2rem;
-    min-width: auto;
-    max-width: 100%;
     border-right: 1px solid #8ab92d;
-    margin-left: 1px;
+    margin-left: 0px;
     padding-left: 1px;
+    gap: 0px;
   }
 }
 
