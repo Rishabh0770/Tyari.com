@@ -169,11 +169,12 @@ body {
 	align-items: center;
 }
 .title span{
-	font-weight: 600;
+	margin-top: 20px;
+	font-weight: bold;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 30px;
 	/*color: #2E3D49;*/
-	color: #fff;
+	color: #000000;
 }
 .title .shortdesc {
 	font-family: 'Open Sans', sans-serif;

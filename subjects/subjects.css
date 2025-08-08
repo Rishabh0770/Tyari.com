@@ -298,9 +298,11 @@ body {
 	padding: 10px;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 30px;
-	color: #2E3D49;
+	font-weight: bold;
+	color: #000000;
 	margin: 100px;
 	margin-bottom: 50px;
+	margin-top: 20px;
 }
 
 /*COURSES AVAILABLE*/
@@ -427,10 +429,12 @@ body {
 /*Small Titles for  Topics*/
 
 .title2 span{
-	font-weight: 700;
+	font-weight: bold;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 30px;
-	color: #2E3D49;
+	color: #000000;
+	margin-top: 100px;
+	margin-bottom: 10px;
 }
 .title2 .shortdesc2 {
 	padding: 10px;
@@ -493,10 +497,29 @@ body {
 	text-decoration: none;
 	transition-duration: .5s;
 	padding: 10px;
+	margin-bottom: 25px;
 }
 .click-me a:hover {
 	background: #8ab92d;
 	color: #fff;
+}
+@media only screen and (max-width: 768px) {
+  .click-me {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  .click-me a {
+    font-size: 14px;
+    padding: 10px 20px;
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+  }
 }
 
 /*PROJECTS*/
@@ -580,7 +603,49 @@ body {
 	width: 300px;
 	font-size: 20px;
 }
+@media only screen and (max-width: 768px) {
+  .sample {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+  }
 
+  .sample ul {
+    width: 100%;
+    max-width: 350px;
+    margin: 15px 0;
+    padding: 0;
+  }
+
+  .sample ul li {
+    padding: 16px 10px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+  }
+
+  .sample ul li:last-child {
+    border-bottom: none;
+  }
+
+  .sample ul li a {
+    font-size: 16px;
+    width: 100%;
+    display: block;
+    color: #8ab92d;
+    transition: 0.3s;
+  }
+
+  .sample ul li a:hover {
+    background-color: #8ab92d;
+    color: #fff;
+    border-radius: 5px;
+    padding: 8px;
+  }
+
+  .lastSample {
+    margin-bottom: 60px;
+  }
+}
 /*FOOTER*/
 footer {
   color: #e5e8ef;
@@ -643,7 +708,7 @@ footer .right-col h1 {
 footer .border {
   width: 100px;
   height: 4px;
-  background: linear-gradient(to right, #a1c55a, #8ab92d);
+  background: linear-gradient(to right, #8ab92d, #8ab92d);
   margin: 2px;
 }
 footer .newsletter-form {
@@ -673,7 +738,7 @@ footer .btn {
   padding: 18px 40px;
   font-size: 16px;
   color: #f1f1f1;
-  background: linear-gradient(to right, #a1c55a, #8ab92d);
+  background: linear-gradient(to right, #8ab92d, #8ab92d);
   border: none;
   font-weight: 700;
   outline: none;
@@ -708,6 +773,70 @@ footer .btn:hover {
 .rishav-name:hover {
   color: #8ab92d;
   text-decoration: underline;
+}
+
+@media only screen and (max-width: 768px) {
+  footer {
+    text-align: center;
+    padding: 30px 0;
+  }
+
+  footer .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer .left-col,
+  footer .right-col {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  footer .logo {
+    margin: 0 auto 20px;
+  }
+
+  footer .social-media {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  footer .social-media a {
+    margin-right: 0;
+  }
+
+  .footer-container p {
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  .footer-container p a {
+    display: inline-block;
+    margin: 5px 0;
+  }
+
+  footer .newsletter-form {
+    flex-direction: column;
+  }
+
+  footer .txtb,
+  footer .btn {
+    width: 90%;
+    margin: 10px auto 0;
+    text-align: center;
+  }
+
+  footer .btn {
+    margin-left: 0;
+  }
+
+  .developer {
+    font-size: 1rem;
+    padding: 0 20px;
+    line-height: 1.4;
+  }
 }
 
 
