@@ -1100,7 +1100,43 @@ form textarea {
 }
 
 
-/*FEEDBACK*/
+/* FEEDBACK - Desktop Style */
+.feedback-heading {
+  font-size: 40px;
+  padding: 10px 10px;
+  color: #000000;
+  font-weight: bold;
+  text-align: left;
+  margin-left: 100px;
+}
+
+.feedback-content p {
+  padding: 0 15px;
+  font-size: 1.2em;
+  line-height: 1.8em;
+  color: #333;
+  text-align: left;
+  margin-left: 90px;
+}
+
+/* ✅ Mobile Responsive Fix */
+@media (max-width: 768px) {
+  .feedback-heading {
+    font-size: 30px;
+    padding-top: 10px;
+    text-align: center;
+    margin-left: 0;  /* ❗ remove left shift */
+  }
+
+  .feedback-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    padding: 0 20px;
+    text-align: center;
+    margin-left: 0;  /* ❗ remove left shift */
+  }
+}
+
 .title2 {
   position: relative;
   margin-top: 150px;
@@ -1119,6 +1155,7 @@ form textarea {
   color: #2e3d49;
   margin-bottom: 10px;
 }
+
 .feedbox {
   margin-top: 50px;
   width: 100%;
@@ -1184,6 +1221,49 @@ form textarea {
   color: #fff;
   font-size: 12px;
   cursor: pointer;
+}
+@media (max-width: 768px) {
+  .feedbox {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+    background-attachment: scroll; /* Better performance on mobile */
+  }
+
+  .feed {
+    width: 100%;
+    height: auto;
+    padding: 20px 10px;
+  }
+
+  .feed form {
+    padding: 10px;
+  }
+
+  .feed form input {
+    width: 100%;
+  }
+
+  .feed form .fname {
+    width: 100%;
+  }
+
+  .feed form textarea {
+    width: 100%;
+    height: 120px;
+  }
+
+  .feed #csubmit {
+    font-size: 14px;
+    padding: 12px 20px;
+  }
+
+  .feed form label {
+    position: static;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 12px;
+  }
 }
 
 /*SCROLLING TEXT*/
@@ -1322,6 +1402,70 @@ footer .btn:hover {
 .rishav-name:hover {
   color: #8ab92d;
   text-decoration: underline;
+}
+
+@media only screen and (max-width: 768px) {
+  footer {
+    text-align: center;
+    padding: 30px 0;
+  }
+
+  footer .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer .left-col,
+  footer .right-col {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  footer .logo {
+    margin: 0 auto 20px;
+  }
+
+  footer .social-media {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  footer .social-media a {
+    margin-right: 0;
+  }
+
+  .footer-container p {
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  .footer-container p a {
+    display: inline-block;
+    margin: 5px 0;
+  }
+
+  footer .newsletter-form {
+    flex-direction: column;
+  }
+
+  footer .txtb,
+  footer .btn {
+    width: 90%;
+    margin: 10px auto 0;
+    text-align: center;
+  }
+
+  footer .btn {
+    margin-left: 0;
+  }
+
+  .developer {
+    font-size: 1rem;
+    padding: 0 20px;
+    line-height: 1.4;
+  }
 }
 
 /*PROPERTIES FOR MAKING WEBSITE RESPONSIVE*/

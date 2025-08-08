@@ -259,11 +259,7 @@ body {
 }
 
 /*Small Titles for  Topics*/
-.title2 {
-	position: relative;
-	padding-top: 150px;
-	margin-left: 100px;
-}
+
 .title2 span{
 	font-weight: 700;
 	font-family: 'Open Sans', sans-serif;
