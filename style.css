@@ -15,6 +15,17 @@ body {
   background: #fff;
   font-family: "Open Sans", sans-serif;
 }
+/*SCROLLBAR Styling*/
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: #8ab92d;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8ab92d; 
+}
 
 /* ------------------------ Header & Navigation ------------------------ */
 header {

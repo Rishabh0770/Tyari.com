@@ -53,6 +53,7 @@ body {
 	align-items: center;
 	padding: 20px 2%;
 	position: fixed;
+	height: 70px;
 	top: 0px;
 	z-index: 10;
 	box-shadow: 1px 1px 10px rgba(0,0,0,0.5);
@@ -147,18 +148,115 @@ body {
 	visibility: hidden;
 }
 
-/*TITLE*/
-.title {
-	margin-top: 0px;
-	margin-left: 100px;
+@media only screen and (max-width: 768px) {
+  /* NAV Container adjustments */
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 5%;
+  }
+
+  /* Logo should stay visible and aligned */
+  .logo {
+  margin-bottom: 10px;
 }
 
-.title .shortdesc {
-	padding: 10px;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 20px;
-	color: #2E3D49;
-	margin-bottom: 50px;
+.logo img {
+  height: 40px;     /* Bigger and brand-visible */
+  max-width: 100%;
+  object-fit: contain;
+}
+
+  /* Hamburger Menu icon becomes visible */
+  .nav .switch-tab {
+    visibility: visible;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+  .nav .switch-tab img {
+  width: 40px;   /* Increase width */
+  height: 40px;  /* Set proper height */
+  object-fit: contain; /* Maintain aspect ratio */
+}
+
+  /* UL Menu becomes vertical and collapsible */
+  .nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    margin-top: 20px;
+    border-radius: 8px;
+  }
+
+  /* Show menu on toggle (you’ll control this via JS) */
+  .nav ul.active {
+    display: flex;
+  }
+
+  .nav ul li {
+    display: block;
+    text-align: left;
+    padding: 12px 20px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .nav ul li a {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav ul li img {
+    width: 18px;
+    margin-right: 10px;
+    transform: translateY(0);
+  }
+
+  /* Search bar responsiveness */
+  .nav .search {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .nav .search .srch {
+    width: 80%;
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  #srchbtn {
+    padding: 8px 16px;
+  }
+
+  #srchbtn img {
+    width: 14px;
+  }
+
+  /* Remove float in mobile */
+  .nav li,
+  .nav a,
+  .nav .search,
+  .nav button {
+    float: none;
+  }
+
+  /* Optional: Reduce padding for small screens */
+  .nav ul li {
+    padding: 10px 10px;
+  }
+}
+
+/*TITLE*/
+.title {
+	margin-top: 100px;
+	text-align: center;
+	justify-content: center;
+	font-size: 30px;
+	font-weight: bold;
+	margin-bottom: 10px;
 }
 
 /*Quick Links*/
@@ -256,6 +354,74 @@ body {
 .dcard:hover .fpart img{
 	transition: .8s ease;
 	transform: scale(1.2);
+}
+@media only screen and (max-width: 768px) {
+  /* QUICK LINKS */
+  .course {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .cbox {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .cbox .det {
+    width: 90%;
+    height: auto;
+    margin: 8px 0;
+  }
+
+  .cbox .det a {
+    font-size: 14px;
+    padding: 14px 20px;
+    display: block;
+    text-align: center;
+  }
+
+  .inbt {
+    font-size: 22px;
+    margin: 50px 20px 30px;
+    text-align: center;
+  }
+
+  /* COURSES AVAILABLE */
+  .ccard {
+    flex-direction: column;
+    padding: 0 10px;
+  }
+
+  .ccardbox {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .dcard {
+    width: 90%;
+    height: auto;
+  }
+
+  .dcard .fpart {
+    height: 180px;
+  }
+
+  .dcard .spart {
+    font-size: 14px;
+    padding: 15px;
+    text-align: left;
+  }
+
+  .dcard .spart img {
+    width: 20px;
+    margin-left: auto;
+    display: block;
+  }
 }
 
 /*Small Titles for  Topics*/

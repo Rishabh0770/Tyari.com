@@ -163,15 +163,15 @@ body {
 
 /*TITLE*/
 .title {
-	margin-top: 18%;
+	margin-top: 50px;
 	display: grid;
 	justify-content: center;
 	align-items: center;
 }
 .title span{
-	font-weight: 700;
+	font-weight: 600;
 	font-family: 'Open Sans', sans-serif;
-	font-size: 60px;
+	font-size: 30px;
 	/*color: #2E3D49;*/
 	color: #fff;
 }
