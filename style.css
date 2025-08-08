@@ -1006,6 +1006,20 @@ form textarea {
 }
 
 /*REVIEW SECTION*/
+.testimonial-heading {
+  font-size: 40px;
+  padding: 100px 20px 40px 20px;
+  color: #000000;
+  font-weight: bold;
+  text-align: center;
+}
+@media only screen and (max-width: 768px) {
+  .testimonial-heading {
+    font-size: 28px;
+    padding: 60px 15px 30px;
+  }
+}
+
 #makeitfull {
   display: flex;
   justify-content: center;
@@ -1084,6 +1098,7 @@ form textarea {
   line-height: 22px;
   text-align: justify;
 }
+
 
 /*FEEDBACK*/
 .title2 {
