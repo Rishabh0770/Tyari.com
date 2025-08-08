@@ -145,6 +145,10 @@ button {
   transform: translateY(-50px);
 }
 
+.quote h1.hero-heading {
+  min-height: 2.5em;
+}
+
 .quote p {
   font-size: 50px;
   color: #2e2e2e;
@@ -174,37 +178,47 @@ button {
   vertical-align: middle;
   min-width: 100px;
 }
-
+/* Reserve space to stop layout jump */
+.typewriter, .typewriter-text {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #8ab92d;
+  min-width: 180px; /* Reserve enough space */
+}
 .hero-heading {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 3px; /* Controls space between text and typewriter */
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000000;
 }
 
+/* Cursor blink animation */
 @keyframes blinkCursor {
-  0%, 100% {
-    border-color: #8ab92d;
-  }
-  50% {
-    border-color: transparent;
-  }
+  from { border-right-color: #8ab92d; }
+  to { border-right-color: transparent; }
 }
 
 /* ------------------------ Responsive: Tablet & Mobile ------------------------ */
 @media (max-width: 768px) {
   .hero-heading {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     line-height: 1.4;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 95vw;
+    gap: 1px
   }
 
   .typewriter {
-    font-size: 1.6rem;
+    min-width: 140px;
+    font-size: 1.4rem;
     max-width: 50vw;
     border-right: 1.3px solid #8ab92d; /* thinner cursor */
+    margin-left: 1px
   }
 
   .play {
@@ -217,12 +231,14 @@ button {
   .hero-heading {
     font-size: 1.3rem;
     max-width: 90vw;
+    gap: 1px
   }
 
   .typewriter {
     font-size: 1.3rem;
     max-width: 45vw;
     border-right: 1px solid #8ab92d;
+    margin-left: 1px
   }
 }
 
@@ -1137,12 +1153,7 @@ footer .btn:hover {
 }
 
 @media (max-width: 768px) {
-  .typewriter h1 {
-    font-size: 6vw;
-    text-align: center;
-    white-space: normal;
-    padding: 0 10px;
-  }
+ 
 
   .card-container,
   .features,
