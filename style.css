@@ -226,20 +226,21 @@ button {
 @media (max-width: 480px) {
   .hero-heading {
     font-size: 1.2rem;
-    gap: 2px;
+    gap: 1px;
     max-width: 100%;
     white-space: normal;
+    line-height: 1.2;
   }
 
   .typewriter {
     font-size: 1.2rem;
-    min-width: 130px;
+    min-width: auto;
     max-width: 100%;
     border-right: 1px solid #8ab92d;
-    margin-left: 2px;
+    margin-left: 1px;
+    padding-left: 1px;
   }
 }
-
 
 /* ------------------------ SVG Image ------------------------ */
 .svg-image img {
@@ -305,6 +306,7 @@ button {
   justify-content: center;
   align-items: center;
   margin-top: 10%;
+  font-weight: bold;
 }
 
 .user img {
