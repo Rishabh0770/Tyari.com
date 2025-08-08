@@ -386,6 +386,13 @@ button {
   font-weight: bold;
   text-align: center;
 }
+@media (max-width: 768px) {
+  .all-subjects-heading {
+    font-size: 24px;
+    padding: 0px 10px;
+  }
+}
+
 .about-heading {
   font-size: 40px;
   padding: 40px 20px;
@@ -393,7 +400,12 @@ button {
   font-weight: bold;
   text-align: center;
 }
-
+@media (max-width: 768px) {
+  .about-heading {
+    font-size: 32px;
+    padding: 15px 15px;
+  }
+}
 /*PORTFOLIO*/
 .portfolio-section {
   padding: 50px 0;
@@ -408,6 +420,13 @@ button {
   font-weight: bold;
   text-align: center;
 }
+@media (max-width: 768px) {
+  .portfolio-heading {
+    font-size: 32px;
+    padding: 8px 15px;
+  }
+}
+
 
 .portfolio-content {
   padding: 0 80px;
@@ -792,6 +811,11 @@ button {
 
 /* 🔧 MEDIA QUERIES FOR TEAM SECTION */
 @media (max-width: 768px) {
+  .team-heading {
+    font-size: 30px;
+    padding: 0px 5px;
+  }
+
   .totalcard {
     flex-direction: column;
     align-items: center;
