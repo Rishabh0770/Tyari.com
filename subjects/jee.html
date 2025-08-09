@@ -9,24 +9,36 @@
 <body>
 
 	<!-- NAVIGATION -->
-	<header>
-		<div class="nav" id="nav">
-			<a href="../index.html" class="logo" style="text-decoration: none;">
-  <img src="../images/icon/logo.png" alt="logo" /></a>
-			<div class="switch-tab" id="switch-tab" onclick="switchTAB()"><img src="../images/icon/menu.png"></div>
-			<ul id="list-switch">
-				<li><a href="#"><img src="../images/courses/d1.png" class="icon">JEE</a></li>
-				<li><a href="gate.html"><img src="../images/courses/paper.png" class="icon">GATE</a></li>
-				<li><a href="computer_courses.html"><img src="../images/courses/computer.png" class="icon">Computer Courses</a></li>
-				<li><a href="computer_courses.html#data"><img src="../images/courses/data.png" class="icon">Data Structures</a></li>
-				<li><a href="computer_courses.html#algo"><img src="../images/courses/algo.png" class="icon">Algorithm</a></li>
-				<li><a href="computer_courses.html#projects"><img src="../images/courses/projects.png" class="icon">Projects</a></li>
-			</ul>
-			<div class="search" id="search-switch">
-				<input type="text" placeholder="Search" class="srch"><button id="srchbtn"><img src="../images/icon/search.png"></button>
-			</div>
-		</div>
-	</header>
+<header>
+  <nav class="nav">
+    <!-- Logo -->
+    <a href="../index.html" class="logo" style="text-decoration: none;">
+      <img src="../images/icon/logo.png" alt="logo">
+    </a>
+
+    <!-- Hamburger Menu -->
+    <div class="switch-tab" id="switch-tab">
+      <img src="../images/icon/menu.png" alt="Menu">
+    </div>
+
+    <!-- Navigation Links -->
+    <ul id="list-switch">
+      <li><a href="#"><img src="../images/courses/d1.png" class="icon">JEE</a></li>
+      <li><a href="gate.html"><img src="../images/courses/paper.png" class="icon">GATE</a></li>
+      <li><a href="computer_courses.html"><img src="../images/courses/computer.png" class="icon">Computer Courses</a></li>
+      <li><a href="computer_courses.html#data"><img src="../images/courses/data.png" class="icon">Data Structures</a></li>
+      <li><a href="computer_courses.html#algo"><img src="../images/courses/algo.png" class="icon">Algorithm</a></li>
+      <li><a href="computer_courses.html#projects"><img src="../images/courses/projects.png" class="icon">Projects</a></li>
+    </ul>
+
+    <!-- Search Bar -->
+    <div class="search" id="search-switch">
+      <input type="text" placeholder="Search" class="srch">
+      <button id="srchbtn"><img src="../images/icon/search.png" alt="Search"></button>
+    </div>
+  </nav>
+</header>
+
 
 	<div class="title">
 		<span>Prepare for JEE Mains & Advanced on<br>Tyari.com</span>
@@ -479,7 +491,9 @@
 	   Developed & designed By- <span class="rishav-name">Rishav Kumar</span> | All Rights Reserved.</p>
 
     </footer>
-<script src="script.js" defer></script>
+<script src="../script.js" defer></script>
+<!-- Bootstrap JS Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

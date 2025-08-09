@@ -166,3 +166,8 @@ function sideMenu(side) {
   }
   side++;
 }
+
+// Mobile menu toggle
+document.getElementById("switch-tab").addEventListener("click", function() {
+  document.getElementById("list-switch").classList.toggle("active");
+});

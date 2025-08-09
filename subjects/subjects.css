@@ -1,253 +1,151 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
-
+/* General Reset */
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 body {
-	background: #FFF;
-	font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
-/*SCROLLBAR Styling*/
-::-webkit-scrollbar {
-  width: 5px;
-}
-::-webkit-scrollbar-thumb {
-  background: #8ab92d;
-  border-radius: 5px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #8ab92d; 
-}
-
-/*NAVIGATION BAR*/
-.logo {
+/* Navbar Container */
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.1);
+  padding: 12px 20px;
   display: flex;
   align-items: center;
-  gap: 8px;
-  flex-shrink: 0; /* Prevent logo from shrinking */
+  justify-content: space-between;
+  z-index: 999;
 }
 
+/* Logo */
 .logo img {
+  height: 45px;
   width: auto;
-  height: 40px;
   cursor: pointer;
-  transition: all 1s;
-  vertical-align: middle;
+  transition: all 0.3s ease;
+}
+.logo img:hover {
+  opacity: 0.8;
 }
 
-.nav
-{
-	width: 100%;
-	background-color: #fff;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: center;
-	padding: 20px 2%;
-	position: fixed;
-	height: 70px;
-	top: 0px;
-	z-index: 10;
-	box-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+/* Navigation Links */
+.nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 25px;
 }
 
-.nav li, a, button
-{
-	float: left;
-	font-family: "Montserrat", sans-serif;
-	font-weight: 500;
-	font-size: 13px;
-	color: #2E3D49;
-	display: block;
-	text-decoration: none;
-	text-align: center;
+.nav ul li a {
+  font-size: 14px;
+  font-weight: 500;
+  color: #2E3D49;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
-.nav ul li img {
-	width: 20px;
-	margin-right: 10px;
-	transform: translateY(5px);
-	padding-top: 5px;
+.nav ul li a:hover {
+  color: #8ab92d;
 }
 
-.nav ul li 
-{
-	list-style: none;
-	display: inline-block;
-	padding: 0px 20px;
+.nav ul li img.icon {
+  width: 20px;
+  margin-right: 8px;
 }
 
-.nav ul li a
-{
-	transition: all 0.3s ease 0s;
+/* Search Bar */
+.search {
+  display: flex;
+  align-items: center;
 }
-
-.nav ul li a:hover
-{
-	color: #8ab92d;
-}
-
-.nav button
-{
-	padding: 9px 25px;
-	background: linear-gradient(to right, #8ab92d, #8ab92d);
-	color: #fff;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-	outline: none;
-	transition: all 0.3s ease 0s;
+.srch {
+  font-size: 13px;
+  width: 250px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #8ab92d;
+  padding: 6px;
 }
 #srchbtn {
-	padding: 9px 20px;
+  padding: 6px 12px;
+  background: #8ab92d;
+  border: none;
+  cursor: pointer;
 }
 #srchbtn img {
-	width: 15px;
-	filter: brightness(100);
-}
-.nav button:hover
-{
-	opacity: .9;
-}
-.nav .search
-{
-	float: right;
-}
-.nav .search .srch
-{
-	font-size: 13px;
-	width: 300px;
-	border: none;
-	outline: none;
-	border-bottom: 2px solid #8ab92d;
-	padding: 9px;
-}
-.nav .search button
-{
-	margin-right: 5px;
-	float: right;
-	margin-left: 10px;
-}
-.nav .switch-tab {
-	cursor: pointer;
-	visibility: hidden;
-}
-.nav .switch-tab img {
-	width: 20px;
-}
-.nav .check-box {
-	cursor: pointer;
-	visibility: hidden;
+  width: 14px;
+  filter: brightness(100);
 }
 
+/* Hamburger Icon */
+.switch-tab {
+  display: none;
+  cursor: pointer;
+}
+.switch-tab img {
+  width: 28px;
+  height: 28px;
+}
+
+/* MOBILE STYLES */
 @media only screen and (max-width: 768px) {
-  /* NAV Container adjustments */
   .nav {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 15px 5%;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
-  /* Logo should stay visible and aligned */
-  .logo {
-  margin-bottom: 10px;
-}
-
-.logo img {
-  height: 40px;     /* Bigger and brand-visible */
-  max-width: 100%;
-  object-fit: contain;
-}
-
-  /* Hamburger Menu icon becomes visible */
-  .nav .switch-tab {
-    visibility: visible;
-    position: absolute;
-    right: 20px;
-    top: 20px;
+  /* Show hamburger on mobile */
+  .switch-tab {
+    display: block;
   }
-  .nav .switch-tab img {
-  width: 40px;   /* Increase width */
-  height: 40px;  /* Set proper height */
-  object-fit: contain; /* Maintain aspect ratio */
-}
 
-  /* UL Menu becomes vertical and collapsible */
+  /* Hide menu by default */
   .nav ul {
     display: none;
     flex-direction: column;
     width: 100%;
-    background-color: #fff;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-    margin-top: 20px;
-    border-radius: 8px;
+    background: #fff;
+    margin-top: 15px;
+    padding: 10px 0;
+    border-top: 1px solid #eee;
   }
 
-  /* Show menu on toggle (you’ll control this via JS) */
+  /* Show when active */
   .nav ul.active {
     display: flex;
   }
 
   .nav ul li {
-    display: block;
-    text-align: left;
-    padding: 12px 20px;
+    padding: 10px 15px;
     border-bottom: 1px solid #eee;
   }
-
-  .nav ul li a {
-    font-size: 15px;
-    display: flex;
-    align-items: center;
+  .nav ul li:last-child {
+    border-bottom: none;
   }
 
-  .nav ul li img {
-    width: 18px;
-    margin-right: 10px;
-    transform: translateY(0);
-  }
-
-  /* Search bar responsiveness */
-  .nav .search {
+  /* Search full width */
+  .search {
     width: 100%;
-    margin-top: 15px;
+    margin-top: 10px;
   }
-
-  .nav .search .srch {
+  .srch {
     width: 80%;
-    font-size: 14px;
-    padding: 8px;
-  }
-
-  #srchbtn {
-    padding: 8px 16px;
-  }
-
-  #srchbtn img {
-    width: 14px;
-  }
-
-  /* Remove float in mobile */
-  .nav li,
-  .nav a,
-  .nav .search,
-  .nav button {
-    float: none;
-  }
-
-  /* Optional: Reduce padding for small screens */
-  .nav ul li {
-    padding: 10px 10px;
   }
 }
+
 
 /*TITLE*/
 .title {
