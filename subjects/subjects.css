@@ -898,3 +898,131 @@ footer .btn:hover {
 		margin-top: 0px;
 	}
 }
+
+
+/* ---------------------- BASE GLOBAL RESET ---------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* ---------------------- RESPONSIVE MEDIA QUERIES ---------------------- */
+
+/* Extra Large Devices (Desktops, 1200px and above) */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 95%;
+  }
+}
+
+/* Large Devices (Laptops/Tablets Landscape, up to 992px) */
+@media (max-width: 992px) {
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section {
+    padding: 50px 20px;
+  }
+
+  .card {
+    width: 48%;
+    margin-bottom: 20px;
+  }
+
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Medium Devices (Tablets Portrait, up to 768px) */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .portfolio-heading,
+  .team-heading,
+  .all-subjects-heading {
+    font-size: 28px;
+    padding: 10px;
+  }
+
+  .typewriter {
+    font-size: 1.3rem;
+  }
+
+  .about-content img {
+    max-width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Small Devices (Mobile Phones, up to 576px) */
+@media (max-width: 576px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+
+  .portfolio-text {
+    font-size: 0.9rem;
+  }
+
+  .typewriter {
+    font-size: 1rem;
+  }
+
+  .typewriter::after {
+    height: 15px; /* smaller cursor height */
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Extra Small Devices (Very small phones, up to 400px) */
+@media (max-width: 400px) {
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  .portfolio-heading,
+  .team-heading,
+  .all-subjects-heading {
+    font-size: 22px;
+  }
+}
