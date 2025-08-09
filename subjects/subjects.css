@@ -764,35 +764,4 @@ footer .btn:hover {
 		margin-top: 20px;
 	}
 }
-@media screen and (max-width: 1366px) {
-	.search {
-		display: none;
-		margin-bottom: 10px;
-	}
-}
 
-@media screen and (max-width: 1000px) {
-	.nav ul, .nav .search {
-		display: none;
-	}
-	.nav #learned-logo {
-		transition: 1s ease;
-		margin-left: 40%;
-		transform: scale(1.5);
-	}
-	.nav ul li{
-		width: 100%;
-		margin-bottom: 5px;
-	}
-	.nav .switch-tab {
-		visibility: visible;
-	}
-	.nav .check-box {
-		visibility: visible;
-	}
-	.search {
-		visibility: visible;
-		margin: 30px;
-		margin-top: 0px;
-	}
-}
