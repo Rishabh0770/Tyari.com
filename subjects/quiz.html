@@ -5,6 +5,16 @@
 	<title>Quiz on Tyari.com</title>
 	<link rel="stylesheet" type="text/css" href="quizStyle.css">
 	<script type="text/javascript" src="../script.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script>
+      $(window).on("scroll", function () {
+        if ($(window).scrollTop()) {
+          $("nav").addClass("black");
+        } else {
+          $("nav").removeClass("black");
+        }
+      });
+    </script>
 </head>
 <body>
 	
