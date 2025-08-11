@@ -489,7 +489,16 @@
     </footer>
 <script src="../script.js" defer></script>
 
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const menuBtn = document.getElementById('switch-tab');
+  const navMenu = document.getElementById('list-switch');
 
+  menuBtn.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+});
+</script>
 
 
 </body>
