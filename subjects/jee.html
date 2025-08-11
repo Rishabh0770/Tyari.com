@@ -8,7 +8,7 @@
 </head>
 <body>
 
-	<!-- NAVIGATION -->
+<!-- NAVIGATION -->
 <header>
   <nav class="nav">
     <!-- Logo -->
@@ -17,12 +17,15 @@
     </a>
 
     <!-- Hamburger Menu -->
-    <div class="switch-tab" id="switch-tab">
-      <img src="../images/icon/menu.png" alt="Menu">
-    </div>
+	 <div id="switch-tab" class="hamburger">
+  ☰
+</div>
+
+
 
     <!-- Navigation Links -->
-    <ul id="list-switch">
+    <ul id="list-switch" class="nav-links">
+
       <li><a href="#"><img src="../images/courses/d1.png" class="icon">JEE</a></li>
       <li><a href="gate.html"><img src="../images/courses/paper.png" class="icon">GATE</a></li>
       <li><a href="computer_courses.html"><img src="../images/courses/computer.png" class="icon">Computer Courses</a></li>
@@ -32,7 +35,6 @@
     </ul>
   </nav>
 </header>
-
 
 	<div class="title">
 		<span>Prepare for JEE Mains & Advanced on<br>Tyari.com</span>
@@ -487,17 +489,8 @@
     </footer>
 <script src="../script.js" defer></script>
 
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const menuBtn = document.querySelector('.hamburger');
-  const navMenu = document.querySelector('.nav-links');
 
-  menuBtn.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-    menuBtn.classList.toggle('open'); // Optional for animation
-  });
-});
-</script>
+
 
 </body>
 </html>

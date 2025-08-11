@@ -167,7 +167,18 @@ function sideMenu(side) {
   side++;
 }
 
-// Mobile menu toggle
-document.getElementById("switch-tab").addEventListener("click", function() {
-  document.getElementById("list-switch").classList.toggle("active");
+// HAMBURGER MENU TOGGLE
+const hamburger = document.getElementById("switch-tab");
+const navMenu = document.getElementById("list-switch");
+
+hamburger.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
+});
+
+// SEARCH BAR TOGGLE
+const searchBtn = document.getElementById("search-btn");
+const searchBox = document.getElementById("search-box");
+
+searchBtn.addEventListener("click", () => {
+  searchBox.classList.toggle("show");
 });
