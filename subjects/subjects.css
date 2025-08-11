@@ -65,31 +65,6 @@ body {
   width: 20px;
   margin-right: 8px;
 }
-
-/* Search Bar */
-.search {
-  display: flex;
-  align-items: center;
-}
-.srch {
-  font-size: 13px;
-  width: 250px;
-  border: none;
-  outline: none;
-  border-bottom: 2px solid #8ab92d;
-  padding: 6px;
-}
-#srchbtn {
-  padding: 6px 12px;
-  background: #8ab92d;
-  border: none;
-  cursor: pointer;
-}
-#srchbtn img {
-  width: 14px;
-  filter: brightness(100);
-}
-
 /* Hamburger Icon */
 .switch-tab {
   display: none;
@@ -134,15 +109,6 @@ body {
   }
   .nav ul li:last-child {
     border-bottom: none;
-  }
-
-  /* Search full width */
-  .search {
-    width: 100%;
-    margin-top: 10px;
-  }
-  .srch {
-    width: 80%;
   }
 }
 
