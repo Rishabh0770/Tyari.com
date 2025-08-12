@@ -1,12 +1,12 @@
 // Changing the style of scroll bar
-// window.onscroll = function() {myFunction()};
+ window.onscroll = function() {myFunction()};
 		
-// function myFunction() {
-// 	var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-// 	var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-// 	var scrolled = (winScroll / height) * 100;
-// 	document.getElementById("myBar").style.width = scrolled + "%"; 
-// }
+ function myFunction() {
+ 	var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+ 	var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+ 	var scrolled = (winScroll / height) * 100;
+ 	document.getElementById("myBar").style.width = scrolled + "%"; 
+ }
 
 function scrollAppear() {
   var introText = document.querySelector('.side-text');
@@ -174,6 +174,7 @@ const navMenu = document.getElementById("list-switch");
 hamburger.addEventListener("click", () => {
   navMenu.classList.toggle("active");
 });
+
 
 // SEARCH BAR TOGGLE
 const searchBtn = document.getElementById("search-btn");

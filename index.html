@@ -8,7 +8,6 @@
     <meta name="desciption" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <script type="text/javascript" src="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
     <script>
       $(window).on("scroll", function () {
@@ -30,7 +29,7 @@
   </div>
 
   <!-- Nav Links -->
-  <ul class="nav-links">
+ <ul class="nav-links" id="list-switch">
     <li><a class="active" href="">Home</a></li>
     <li><a href="#portfolio_section">Portfolio</a></li>
     <li><a href="#services_section">Services</a></li>
@@ -45,7 +44,7 @@
 
   <!-- Get Started + Menu icon -->
   <a class="get-started" href="login.html">Get Started</a>
-  <img src="images/icon/menu.png" class="menu" onclick="sideMenu(0)" alt="menu" />
+<img src="images/icon/menu.png" id="switch-tab" class="menu" alt="menu" />
 </nav>
 
       <div class="head-container">
@@ -521,5 +520,6 @@
 	   Developed & designed By- <span class="rishav-name">Rishav Kumar</span> | All Rights Reserved.</p>
 
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
