@@ -38,7 +38,7 @@ body {
 
 .logo img {
   width: auto;
-  height: 40px;
+  height: 50px; /* Increased from 40px to 50px */
   cursor: pointer;
   transition: all 1s;
   vertical-align: middle;

@@ -13,12 +13,14 @@ html {
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 body {
   background: #fff;
   font-family: "Open Sans", sans-serif;
   margin: 0;
   padding: 0;
+    overflow-x: hidden;
 }
 /*SCROLLBAR Styling*/
 ::-webkit-scrollbar {
@@ -34,7 +36,7 @@ body {
 
 /* ------------------------ Header & Navigation ------------------------ */
 header {
-  height: 100vh;
+  height: 100%;
 }
 
 .black {
@@ -48,7 +50,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   z-index: 1000;
   background: #fff;
   transition: 1.5s;
@@ -135,6 +137,7 @@ nav ul li a:hover {
   transition: all 1s;
   vertical-align: middle;
 }
+
 
 a,
 button {
@@ -1500,14 +1503,6 @@ footer .btn:hover {
     flex-wrap: wrap;
   }
 
-  .logo {
-    order: 1;
-  }
-
-  .logo img {
-    height: 30px;
-  }
-
   ul, .srch, .get-started {
     display: none;
   }
@@ -1627,7 +1622,7 @@ footer .btn:hover {
   .nav-links {
     display: none;
     flex-direction: column;
-    background-color: #000;
+    background-color: #c1bebe;
     position: absolute;
     top: 60px;
     left: 0;
