@@ -4,8 +4,6 @@
 	<link rel="shortcut icon" type="png" href="../images/icon/favicon.png">
 	<title>Prepare for JEE Mains & Advanced</title>
 	<link rel="stylesheet" type="text/css" href="subjects.css">
-	<script type="text/javascript" src="../script.js"></script>
-	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
     <script>
       $(window).on("scroll", function () {
         if ($(window).scrollTop()) {
@@ -22,29 +20,26 @@
 <header>
   <nav class="nav">
     <!-- Logo -->
-    <a href="../index.html" class="logo" style="text-decoration: none;">
+    <a href="index.html" class="logo" style="text-decoration: none;">
       <img src="../images/icon/logo.png" alt="logo">
     </a>
 
     <!-- Hamburger Menu -->
-	 <div id="switch-tab" class="hamburger">
-  ☰
-</div>
-
-
+    <div id="switch-tab" class="hamburger">
+      ☰
+    </div>
 
     <!-- Navigation Links -->
     <ul id="list-switch" class="nav-links">
-
-      <li><a href="#"><img src="../images/courses/d1.png" class="icon">JEE</a></li>
-      <li><a href="gate.html"><img src="../images/courses/paper.png" class="icon">GATE</a></li>
-      <li><a href="computer_courses.html"><img src="../images/courses/computer.png" class="icon">Computer Courses</a></li>
-      <li><a href="computer_courses.html#data"><img src="../images/courses/data.png" class="icon">Data Structures</a></li>
-      <li><a href="computer_courses.html#algo"><img src="../images/courses/algo.png" class="icon">Algorithm</a></li>
-      <li><a href="computer_courses.html#projects"><img src="../images/courses/projects.png" class="icon">Projects</a></li>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../subjects/jee.html">JEE</a></li>
+      <li><a href="../subjects/gate.html">GATE</a></li>
+      <li><a href="../subjects/computer_courses.html">Computer Courses</a></li>
+      <li><a href="../index.html/#contactus_section">Contact</a></li>
     </ul>
   </nav>
 </header>
+
 
 	<div class="title">
 		<span>Prepare for JEE Mains & Advanced on<br>Tyari.com</span>
@@ -497,18 +492,22 @@
 	   Developed & designed By- <span class="rishav-name">Rishav Kumar</span> | All Rights Reserved.</p>
 
     </footer>
-<script src="../script.js" defer></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="../script.js"></script>
 
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const menuBtn = document.getElementById('switch-tab');
-  const navMenu = document.getElementById('list-switch');
+	<script>
+// Hamburger toggle
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.getElementById("switch-tab");
+  const navLinks = document.getElementById("list-switch");
 
-  menuBtn.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-  });
-});
-</script>
+  if (hamburger && navLinks) {
+    hamburger.addEventListener("click", function () {
+      navLinks.classList.toggle("show");
+    });
+  }
+}); </script>
+
 
 
 </body>
