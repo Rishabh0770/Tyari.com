@@ -21,66 +21,70 @@
   </head>
   <body>
     <!-- Navigation Bar -->
-    <header id="header">
-      <nav class="navbar">
-  <!-- Logo and Brand Name -->
-  <div class="logo">
-    <img src="images/icon/logo.png" alt="logo" />
+   <header id="header">
+  <nav class="navbar">
+    <!-- Logo and Brand Name -->
+    <div class="logo">
+      <img src="images/icon/logo.png" alt="logo" />
+    </div>
+
+    <!-- Nav Links -->
+    <ul class="nav-links" id="list-switch">
+      <li><a class="active" href="">Home</a></li>
+      <li><a href="#portfolio_section">Portfolio</a></li>
+      <li><a href="#services_section">Services</a></li>
+      <li><a href="#contactus_section">Contact</a></li>
+    </ul>
+
+    <!-- Search bar -->
+    <div class="srch">
+      <input type="text" class="search" placeholder="Search here..." />
+      <img src="images/icon/search.png" alt="search" onclick="slide()" />
+    </div>
+
+    <!-- Get Started + Menu icon -->
+    <a class="get-started" href="login.html">Get Started</a>
+    <img src="images/icon/menu.png" id="switch-tab" class="menu" alt="menu" />
+  </nav>
+
+  <div class="head-container">
+    <div class="quote">
+      <p>
+        The beautiful thing about learning is that nobody can take it away from you
+      </p>
+      <h4>With India's #1 Learning App</h4>
+      <h5>
+        Join us in the journey of knowledge where learning today empowers you to become a leader of tomorrow. Our platform offers high-quality resources to help you succeed in every step of your career.
+      </h5>
+      <br />
+      <h1 class="hero-heading">
+        <span class="static-text">Learning Today</span>&nbsp;<span class="highlight-text">Leading Tomorrow</span>
+      </h1>
+    </div>
+    <div class="svg-image" style="text-align: center;">
+      <img src="images/extra/svg1.jpg" alt="svg" />
+    </div>
   </div>
 
-  <!-- Nav Links -->
- <ul class="nav-links" id="list-switch">
-    <li><a class="active" href="">Home</a></li>
-    <li><a href="#portfolio_section">Portfolio</a></li>
-    <li><a href="#services_section">Services</a></li>
-    <li><a href="#contactus_section">Contact</a></li>
-  </ul>
-
-  <!-- Search bar -->
-  <div class="srch">
-    <input type="text" class="search" placeholder="Search here..." />
-    <img src="images/icon/search.png" alt="search" onclick="slide()" />
+  <div class="side-menu" id="side-menu">
+    <div class="close" onclick="sideMenu(1)">
+      <img src="images/icon/close.png" alt="" />
+    </div>
+    <div class="user">
+      <img src="images/creator/woman.png" alt="Username" />
+      <p>Rishav Kumar</p>
+    </div>
+    <ul>
+      <li><a href="#about_section">About</a></li>
+      <li><a href="#portfolio_section">Portfolio</a></li>
+      <li><a href="#team_section">Team</a></li>
+      <li><a href="#services_section">Services</a></li>
+      <li><a href="#contactus_section">Contact</a></li>
+      <li><a href="#feedBACK">Feedback</a></li>
+    </ul>
   </div>
+</header>
 
-  <!-- Get Started + Menu icon -->
-  <a class="get-started" href="login.html">Get Started</a>
-<img src="images/icon/menu.png" id="switch-tab" class="menu" alt="menu" />
-</nav>
-
-      <div class="head-container">
-        <div class="quote">
-          <p>
-            The beautiful thing about learning is that nobody can take it away
-            from you
-          </p>
-          <h4>With India's #1 Learning App</h4>
-          <h5>
-            Join us in the journey of knowledge where learning today empowers you to become a leader of tomorrow. Our platform offers high-quality resources to help you succeed in every step of your career.
-          </h5> <br>
-          <h1 class="hero-heading"><span class="static-text">Learning Today</span>&nbsp;<span class="highlight-text">Leading Tomorrow</span></h1>
-        </div>
-        <div class="svg-image" style="text-align: center;">
-          <img src="images/extra/svg1.jpg" alt="svg" />
-        </div>
-      </div>
-      <div class="side-menu" id="side-menu">
-        <div class="close" onclick="sideMenu(1)">
-          <img src="images/icon/close.png" alt="" />
-        </div>
-        <div class="user">
-          <img src="images/creator/woman.png" alt="Username" />
-          <p>Rishav Kumar</p>
-        </div>
-        <ul>
-          <li><a href="#about_section">About</a></li>
-          <li><a href="#portfolio_section">Portfolio</a></li>
-          <li><a href="#team_section">Team</a></li>
-          <li><a href="#services_section">Services</a></li>
-          <li><a href="#contactus_section">Contact</a></li>
-          <li><a href="#feedBACK">Feedback</a></li>
-        </ul>
-      </div>
-    </header>
 
     <!-- Some Popular Subjects -->
     <div class="title">

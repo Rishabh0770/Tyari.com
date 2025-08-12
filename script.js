@@ -1,54 +1,66 @@
-// Changing the style of scroll bar
- window.onscroll = function() {myFunction()};
-		
- function myFunction() {
- 	var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
- 	var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
- 	var scrolled = (winScroll / height) * 100;
- 	document.getElementById("myBar").style.width = scrolled + "%"; 
- }
+// Scroll Bar Progress
+window.onscroll = function () {
+  myFunction();
+  scrollAppear();
+};
 
+function myFunction() {
+  const bar = document.getElementById("myBar");
+  if (!bar) return;
+
+  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  bar.style.width = scrolled + "%";
+}
+
+// Scroll-based animation trigger
 function scrollAppear() {
-  var introText = document.querySelector('.side-text');
-  var sideImage = document.querySelector('.sideImage');
-  var introPosition = introText.getBoundingClientRect().top;
-  var imagePosition = sideImage.getBoundingClientRect().top;
-  
-  var screenPosition = window.innerHeight / 1.2;
+  const introText = document.querySelector(".side-text");
+  const sideImage = document.querySelector(".sideImage");
 
-  if(introPosition < screenPosition) {
-    introText.classList.add('side-text-appear');
+  const screenPosition = window.innerHeight / 1.2;
+
+  if (introText && introText.getBoundingClientRect().top < screenPosition) {
+    introText.classList.add("side-text-appear");
   }
-  if(imagePosition < screenPosition) {
-    sideImage.classList.add('sideImage-appear');
+
+  if (sideImage && sideImage.getBoundingClientRect().top < screenPosition) {
+    sideImage.classList.add("sideImage-appear");
   }
 }
 
-window.addEventListener('scroll', scrollAppear);
-
-// For switching between navigation menus in mobile mode
-var i = 2;
+// Mobile nav toggle
+let tabToggle = 2;
 function switchTAB() {
-	var x = document.getElementById("list-switch");
-	if(i%2 == 0) {
-		document.getElementById("list-switch").style= "display: grid; height: 50vh; margin-left: 5%;";
-		document.getElementById("search-switch").style= "display: block; margin-left: 5%;";
-	}else {
-		document.getElementById("list-switch").style= "display: none;";
-		document.getElementById("search-switch").style= "display: none;";
-	}
-	i++;
+  const list = document.getElementById("list-switch");
+  const search = document.getElementById("search-switch");
+
+  if (!list || !search) return;
+
+  if (tabToggle % 2 === 0) {
+    list.style.display = "grid";
+    list.style.height = "50vh";
+    list.style.marginLeft = "5%";
+    search.style.display = "block";
+    search.style.marginLeft = "5%";
+  } else {
+    list.style.display = "none";
+    search.style.display = "none";
+  }
+  tabToggle++;
 }
 
-// For LOGIN
-var x = document.getElementById("login");
-var y = document.getElementById("register");
-var z = document.getElementById("btn");
-var a = document.getElementById("log");
-var b = document.getElementById("reg");
-var w = document.getElementById("other");
+// Login/Register form toggle
+const x = document.getElementById("login");
+const y = document.getElementById("register");
+const z = document.getElementById("btn");
+const a = document.getElementById("log");
+const b = document.getElementById("reg");
+const w = document.getElementById("other");
 
 function register() {
+  if (!x || !y || !z || !a || !b || !w) return;
   x.style.left = "-400px";
   y.style.left = "50px";
   z.style.left = "110px";
@@ -58,6 +70,7 @@ function register() {
 }
 
 function login() {
+  if (!x || !y || !z || !a || !b || !w) return;
   x.style.left = "50px";
   y.style.left = "450px";
   z.style.left = "0px";
@@ -65,121 +78,114 @@ function login() {
   a.style.color = "#fff";
   b.style.color = "#000";
 }
-  
-// CheckBox Function
-function goFurther(){
-  if (document.getElementById("chkAgree").checked == true) {
-    document.getElementById('btnSubmit').style = 'background: linear-gradient(to right, #8ab92d, #8ab92d);';
-  }
-  else{
-    document.getElementById('btnSubmit').style = 'background: lightgray;';
-  }
+
+// Checkbox submit enable
+function goFurther() {
+  const checkbox = document.getElementById("chkAgree");
+  const btn = document.getElementById("btnSubmit");
+
+  if (!checkbox || !btn) return;
+
+  btn.style.background = checkbox.checked
+    ? "linear-gradient(to right, #8ab92d, #8ab92d)"
+    : "lightgray";
 }
 
+// Google redirect
 function google() {
-  	window.location.assign("https://accounts.google.com/signin/v2/identifier?service=accountsettings&continue=https%3A%2F%2Fmyaccount.google.com%2F%3Futm_source%3Dsign_in_no_continue&csig=AF-SEnbZHbi77CbAiuHE%3A1585466693&flowName=GlifWebSignIn&flowEntry=AddSession", "_blank");
+  window.location.assign(
+    "https://accounts.google.com/signin/v2/identifier?service=accountsettings&continue=https%3A%2F%2Fmyaccount.google.com%2F%3Futm_source%3Dsign_in_no_continue&csig=AF-SEnbZHbi77CbAiuHE%3A1585466693&flowName=GlifWebSignIn&flowEntry=AddSession",
+    "_blank"
+  );
 }
 
-// QUIZ Page
+// QUIZ page toggle logic
 function quizt(frame) {
-  document.getElementById('f1').style='display: none;';
-  document.getElementById('f2').style='display: none;';
-  document.getElementById('f3').style='display: none;';
-  document.getElementById('f4').style='display: none;';
-  document.getElementById('f5').style='display: none;';
-  document.getElementById('f6').style='display: none;';
-  document.getElementById('f7').style='display: none;';
-  document.getElementById('f8').style='display: none;';
-  document.getElementById('f9').style='display: none;';
-  document.getElementById('f10').style='display: none;';
-  document.getElementById('f11').style='display: none;';
-  if(frame == 1) document.getElementById('f1').style = 'display: block';
-  else if(frame == 2) document.getElementById('f2').style = 'display: block';
-  else if(frame == 3) document.getElementById('f3').style = 'display: block';
-  else if(frame == 4) document.getElementById('f4').style = 'display: block';
-  else if(frame == 5) document.getElementById('f5').style = 'display: block';
-  else if(frame == 6) document.getElementById('f6').style = 'display: block';
-  else if(frame == 7) document.getElementById('f7').style = 'display: block';
-  else if(frame == 8) document.getElementById('f8').style = 'display: block';
-  else if(frame == 9) document.getElementById('f9').style = 'display: block';
-  else if(frame == 10) document.getElementById('f10').style = 'display: block';
-  else if(frame == 11) document.getElementById('f11').style = 'display: block'; 
-  else alert('error');
+  for (let i = 1; i <= 11; i++) {
+    const f = document.getElementById("f" + i);
+    if (f) f.style.display = "none";
+  }
+
+  const active = document.getElementById("f" + frame);
+  if (active) {
+    active.style.display = "block";
+  } else {
+    alert("error");
+  }
 }
 
 function startquiz() {
-  document.getElementById('title').style = 'display: none;'; 
+  const title = document.getElementById("title");
+  const panel = document.getElementById("panel");
+  const left = document.getElementById("left");
+  const right = document.getElementById("right");
 
-  document.getElementById('panel').style = 'display: inline-flex;'; 
-  document.getElementById('left').style = 'display: block;'; 
-  document.getElementById('right').style = 'display: block;'; 
+  if (title) title.style.display = "none";
+  if (panel) panel.style.display = "inline-flex";
+  if (left) left.style.display = "block";
+  if (right) right.style.display = "block";
 }
+
+// Search panel display
 function searchdisplay() {
-  document.getElementById('searchpanel').style.display="block";
+  const panel = document.getElementById("searchpanel");
+  if (panel) panel.style.display = "block";
 }
 
+// Display sections (images & buttons)
 function display(n) {
-  var img1 = document.getElementById('img1');
-  var img2 = document.getElementById('img2');
-  var img3 = document.getElementById('img3');
-  var img4 = document.getElementById('img4');
-  var s1 = document.getElementById('s1');
-  var s2 = document.getElementById('s2');
-  var s3 = document.getElementById('s3');
-  var s4 = document.getElementById('s4');
+  for (let i = 1; i <= 4; i++) {
+    const img = document.getElementById("img" + i);
+    const btn = document.getElementById("s" + i);
 
-  img1.style = 'display: none;';
-  img2.style = 'display: none;';
-  img3.style = 'display: none;';
-  img4.style = 'display: none;';
-  s1.style = 'background: #8ab92d; color: #FFF;';
-  s2.style = 'background: #8ab92d; color: #FFF;';
-  s3.style = 'background: #8ab92d; color: #FFF;';
-  s4.style = 'background: #8ab92d; color: #FFF;';
+    if (img) img.style.display = "none";
+    if (btn) {
+      btn.style.background = "#8ab92d";
+      btn.style.color = "#FFF";
+    }
+  }
 
-  if(n==1) {
-    img1.style = 'display: block;';
-    s1.style = 'background: #E5E8EF; color: #8ab92d;';
+  const activeImg = document.getElementById("img" + n);
+  const activeBtn = document.getElementById("s" + n);
+
+  if (activeImg) activeImg.style.display = "block";
+  if (activeBtn) {
+    activeBtn.style.background = "#E5E8EF";
+    activeBtn.style.color = "#8ab92d";
   }
-  if(n==2) {
-    img2.style = 'display: block;';
-    s2.style = 'background: #E5E8EF; color: #8ab92d;';
-  }
-  if(n==3) {
-    img3.style = 'display: block;';
-    s3.style = 'background: #E5E8EF; color: #8ab92d;';
-  }
-  if(n==4) {
-    img4.style = 'display: block;';
-    s4.style = 'background: #E5E8EF; color: #8ab92d;';
-  } 
 }
 
-
+// Side Menu (Hamburger)
 function sideMenu(side) {
-  var menu = document.getElementById('side-menu');
-  if(side==0) {
-    menu.style = 'transform: translateX(0vh); position:fixed;';
+  const menu = document.getElementById("side-menu");
+  if (!menu) return;
+
+  if (side === 0) {
+    menu.style.transform = "translateX(0vh)";
+    menu.style.position = "fixed";
+  } else {
+    menu.style.transform = "translateX(-100%)";
   }
-  else {
-    menu.style = 'transform: translateX(-100%);';
-  }
-  side++;
 }
 
-// HAMBURGER MENU TOGGLE
-const hamburger = document.getElementById("switch-tab");
-const navMenu = document.getElementById("list-switch");
+// Hamburger Menu Toggle
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.getElementById("switch-tab");
+  const navMenu = document.getElementById("list-switch");
 
-hamburger.addEventListener("click", () => {
-  navMenu.classList.toggle("active");
-});
+  if (hamburger && navMenu) {
+    hamburger.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+    });
+  }
 
+  // Search bar toggle
+  const searchBtn = document.getElementById("search-btn");
+  const searchBox = document.getElementById("search-box");
 
-// SEARCH BAR TOGGLE
-const searchBtn = document.getElementById("search-btn");
-const searchBox = document.getElementById("search-box");
-
-searchBtn.addEventListener("click", () => {
-  searchBox.classList.toggle("show");
+  if (searchBtn && searchBox) {
+    searchBtn.addEventListener("click", () => {
+      searchBox.classList.toggle("show");
+    });
+  }
 });

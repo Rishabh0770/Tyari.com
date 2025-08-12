@@ -231,6 +231,10 @@ button {
   height: auto;
   display: none;
 }
+#side-menu {
+  transition: transform 0.3s ease;
+  transform: translateX(-100%);
+}
 
 .side-menu {
   width: 100%;
