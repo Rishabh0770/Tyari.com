@@ -6,7 +6,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  outline: solid red;
+  outline: solid green;
 }
 
 html {
@@ -49,7 +49,7 @@ nav {
   background: #fff;
   transition: 1.5s;
   flex-wrap: wrap;
-  max-width: 1300px;
+  box-sizing: border-box;
 }
 
 nav ul {
@@ -1507,7 +1507,11 @@ footer .btn:hover {
   }
 }
 @media screen and (max-width: 576px) {
- 
+  nav {
+    padding: 10px 15px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
   .logo {
     flex-direction: row;
