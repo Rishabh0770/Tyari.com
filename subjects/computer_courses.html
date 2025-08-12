@@ -2,6 +2,8 @@
 <html>
 <head>
 	<link rel="shortcut icon" type="png" href="../images/icon/favicon.png">
+		    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 	<title>Computer Science Courses on Tyari.com</title>
 	<link rel="stylesheet" type="text/css" href="subjects.css">
 	<script type="text/javascript" src="../script.js"></script>
@@ -620,6 +622,20 @@
 	   Developed & designed By- <span class="rishav-name">Rishav Kumar</span> | All Rights Reserved.</p>
 
     </footer>
+		<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="../script.js"></script>
 
+	<script>
+// Hamburger toggle
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.getElementById("switch-tab");
+  const navLinks = document.getElementById("list-switch");
+
+  if (hamburger && navLinks) {
+    hamburger.addEventListener("click", function () {
+      navLinks.classList.toggle("show");
+    });
+  }
+}); </script>
 </body>
 </html>
