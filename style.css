@@ -6,6 +6,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  outline: solid red;
 }
 
 html {
@@ -29,7 +30,7 @@ body {
 
 /* ------------------------ Header & Navigation ------------------------ */
 header {
-  height: 90vh;
+  height: 100vh;
 }
 
 .black {
@@ -168,7 +169,7 @@ button {
 
 .quote p {
   font-size: 50px;
-  color: #2e2e2e;
+  color: #000000;
 }
 
 .quote h4 {
