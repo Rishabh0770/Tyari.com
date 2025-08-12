@@ -6,15 +6,19 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  outline: solid green;
+  
 }
 
 html {
   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
 }
 body {
   background: #fff;
   font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 /*SCROLLBAR Styling*/
 ::-webkit-scrollbar {
@@ -44,7 +48,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   z-index: 1000;
   background: #fff;
   transition: 1.5s;
@@ -160,8 +164,10 @@ button {
 }
 
 .quote {
+  margin-top: 50px;
   width: 600px;
   transform: translateY(-50px);
+  text-align: center;
 }
 
 .quote h1.hero-heading {
@@ -390,6 +396,7 @@ button {
 
   .side-image {
     margin-top: 17px !important;
+    text-align: center;
   }
 }
 .all-subjects-heading{
