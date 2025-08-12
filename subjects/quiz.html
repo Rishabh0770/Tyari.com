@@ -44,21 +44,30 @@
   </nav>
 </header>
 	
+<!-- Start Screen -->
+<div class="main-frame" id="mainFrame">
+  <div class="title">
+    <div class="title-inner">
+      <div class="text-box">
+        <span>Daily Quiz on Tyari.com</span>
+        <div class="shortdesc">
+          <p>If you think education is expensive, try ignorance</p>
+        </div>
+      </div>
+      <button onclick="startquiz()">Start Now</button>
+    </div>
+  </div>
+</div>
 
-<!-- MAIN Heading of Page -->
-	<div class="title" id="title" style="margin-top: 100px;">
-		<span>Daily Quiz on Tyari.com</span>
-		<div class="shortdesc"><br>
-			<p>If you think education is expensive, try ignorance</p>
-		</div>
-		<button onclick="startquiz()">Start Now</button>
-	</div>
 
 
+<!-- Quiz Panel (Hidden at first) -->
 <div class="panel" id="panel">
-	<div class="left-side" id="left">
-		<ul>
-			<li onclick="quizt(1)">HOME</li>
+  <button class="quiz-menu-toggle" onclick="toggleQuizMenu()">☰ Categories</button>
+
+  <div class="left-side" id="left">
+    <ul>
+      <li onclick="quizt(1)">HOME</li>
 			<li onclick="quizt(2)">JEE Mains</li>
 			<li onclick="quizt(3)">JEE Advanced</li>
 			<li onclick="quizt(4)">GATE</li>
@@ -69,18 +78,13 @@
 			<li onclick="quizt(9)">Data Structures</li>
 			<li onclick="quizt(10)">Algorithm</li>
 			<li onclick="quizt(11)">Interview Questions</li>
-		</ul>
-	</div>
+    </ul>
+  </div>
 
-	<div class="right-side" id="right">
-		
-
-		<div id="quiz-container">
-	<button class="quiz-menu-toggle" onclick="toggleQuizMenu()">☰ Categories</button>
-			
-			<div id="f1"><div class="quiz-frame main-frame"></div></div>
-
-			<div id="f2"><iframe class="quiz-frame" src="https://forms.gle/3gCuMiwMVDcM7rTQA" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></div>
+  <div class="right-side" id="right">
+    <div id="quiz-container">
+      <div id="f1"><div class="quiz-frame main-frame"></div></div>
+      <div id="f2"><iframe class="quiz-frame" src="https://forms.gle/3gCuMiwMVDcM7rTQA" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></div>
 			
 			<div id="f3"><iframe class="quiz-frame" src="https://docs.google.com/forms/d/e/1FAIpQLSeVTLsd_AqZGpbIMnZRm20OKrjjiYSirWBjfCHpWtAsMQU--g/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></div>
 			
@@ -99,11 +103,10 @@
 			<div id="f10"><iframe class="quiz-frame" src="https://docs.google.com/forms/d/e/1FAIpQLSflwS89sG7H98J9vFgFqJgsKaZ5gpq3yUlOiW3up7RQQ-qRnw/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></div>
 
 			<div id="f11"><iframe class="quiz-frame" src="https://forms.gle/PcVP8fMeWqPQ6W9w7" frameborder="0" marginheiclass="quiz-frame" ght="0" marginwidth="0">Loading…</iframe></div>
-
-		</div>
-	</div>
-
+    </div>
+  </div>
 </div>
+
 <script src="../script.js"></script>
 
 	<script>
@@ -118,6 +121,28 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 }); </script>
+<script>
+function startquiz() {
+  // Hide intro screen
+  document.getElementById('mainFrame').style.display = 'none';
+
+  // Show quiz panel
+  document.getElementById('panel').style.display = 'flex';
+
+  // Optionally show first quiz frame (e.g., HOME)
+  quizt(1);
+}
+
+function quizt(index) {
+  for (let i = 1; i <= 11; i++) {
+    const frame = document.getElementById('f' + i);
+    if (frame) {
+      frame.style.display = (i === index) ? 'block' : 'none';
+    }
+  }
+}
+</script>
+
 
 </body>
 </html>
