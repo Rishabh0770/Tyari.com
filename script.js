@@ -117,14 +117,19 @@ function quizt(frame) {
 function startquiz() {
   const title = document.getElementById("title");
   const panel = document.getElementById("panel");
-  const left = document.getElementById("left");
-  const right = document.getElementById("right");
 
   if (title) title.style.display = "none";
   if (panel) panel.style.display = "inline-flex";
-  if (left) left.style.display = "block";
-  if (right) right.style.display = "block";
+
+  quizt(1); // Optional: Default to HOME
 }
+function toggleQuizMenu() {
+  const leftPanel = document.getElementById("left");
+  if (leftPanel) {
+    leftPanel.classList.toggle("show");
+  }
+}
+
 
 // Search panel display
 function searchdisplay() {

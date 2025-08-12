@@ -6,39 +6,43 @@
 
 	<title>Quiz on Tyari.com</title>
 	<link rel="stylesheet" type="text/css" href="quizStyle.css">
-	<script type="text/javascript" src="../script.js"></script>
 	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
     <script>
-      $(window).on("scroll", function () {
-        if ($(window).scrollTop()) {
-          $("nav").addClass("black");
-        } else {
-          $("nav").removeClass("black");
-        }
-      });
-    </script>
+  $(window).on("scroll", function () {
+    if ($(window).scrollTop()) {
+      $("nav").addClass("black");
+    } else {
+      $("nav").removeClass("black");
+    }
+  });
+</script>
 </head>
 <body>
 	
 <!-- NAVIGATION -->
-	<header>
-		<div class="nav" id="nav">
-			<a href="../index.html" class="logo" style="text-decoration: none;">
-  <img src="../images/icon/book.png" alt="logo" />
-  <span class="brand-name">Tyari.com</span>
-</a>
-			<div class="switch-tab" id="switch-tab" onclick="switchTAB()"><img src="../images/icon/menu.png"></div>
-			<ul id="list-switch">
-				<li><a href="jee.html"><img src="../images/courses/d1.png" class="icon">JEE</a></li>
-				<li><a href="gate.html"><img src="../images/courses/paper.png" class="icon">GATE</a></li>
-				<li><a href="computer_courses.html"><img src="../images/courses/computer.png" class="icon">Computer Courses</a></li>
-				<li><a href="computer_courses.html#data"><img src="../images/courses/data.png" class="icon">Data Structures</a></li>
-				<li><a href="computer_courses.html#algo"><img src="../images/courses/algo.png" class="icon">Algorithm</a></li>
-				<li><a href="computer_courses.html#projects"><img src="../images/courses/projects.png" class="icon">Projects</a></li>
-			</ul>
-			
-		</div>
-	</header>
+<header>
+  <nav class="nav">
+    <!-- Logo -->
+    <a href="../index.html" class="logo" style="text-decoration: none;">
+      <img src="../images/icon/logo.png" alt="logo">
+    </a>
+
+    <!-- Hamburger Menu -->
+    <div id="switch-tab" class="hamburger">
+      ☰
+    </div>
+
+    <!-- Navigation Links -->
+    <ul id="list-switch" class="nav-links">
+      <li><a href="jee.html"><img src="../images/courses/d1.png" class="icon">JEE</a></li>
+	  <li><a href="gate.html"><img src="../images/courses/paper.png" class="icon">GATE</a></li>
+	  <li><a href="computer_courses.html"><img src="../images/courses/computer.png" class="icon">Computer Courses</a></li>
+	  <li><a href="computer_courses.html#data"><img src="../images/courses/data.png" class="icon">Data Structures</a></li>
+	  <li><a href="computer_courses.html#algo"><img src="../images/courses/algo.png" class="icon">Algorithm</a></li>
+	  <li><a href="computer_courses.html#projects"><img src="../images/courses/projects.png" class="icon">Projects</a></li>
+    </ul>
+  </nav>
+</header>
 	
 
 <!-- MAIN Heading of Page -->
@@ -52,7 +56,6 @@
 
 
 <div class="panel" id="panel">
-	
 	<div class="left-side" id="left">
 		<ul>
 			<li onclick="quizt(1)">HOME</li>
@@ -70,7 +73,10 @@
 	</div>
 
 	<div class="right-side" id="right">
+		
+
 		<div id="quiz-container">
+	<button class="quiz-menu-toggle" onclick="toggleQuizMenu()">☰ Categories</button>
 			
 			<div id="f1"><div class="quiz-frame main-frame"></div></div>
 
@@ -98,7 +104,20 @@
 	</div>
 
 </div>
+<script src="../script.js"></script>
 
-	<script type="text/javascript" src="../script.js"></script>
+	<script>
+// Hamburger toggle
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.getElementById("switch-tab");
+  const navLinks = document.getElementById("list-switch");
+
+  if (hamburger && navLinks) {
+    hamburger.addEventListener("click", function () {
+      navLinks.classList.toggle("show");
+    });
+  }
+}); </script>
+
 </body>
 </html>
