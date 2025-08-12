@@ -218,6 +218,15 @@ body {
 	justify-content: center;
 	align-items: center;
 }
+.ccard a {
+  color: inherit;           /* Use the text color of parent (white) */
+  text-decoration: none;    /* Remove underline */
+  cursor: pointer;          /* Pointer cursor on hover */
+}
+
+.ccard a:hover {
+  color: #000000;           /* Brand cyan color on hover */
+}
 .ccardbox {
 	display: flex;
 	flex-wrap: wrap;
@@ -246,23 +255,27 @@ body {
 }
 
 .dcard .spart {
-	padding: 10px;
-	padding-right: 0px;
-	color: #fff;
-	text-align: left;
-	cursor: pointer;
+  display: flex;                    /* make it flex container */
+  justify-content: space-between;  /* text left, arrow right */
+  align-items: center;              /* vertically center items */
+  padding: 10px 15px 10px 10px;       /* padding: top-right-bottom-left */
+  color: #fff;
+  cursor: pointer;
 }
+
 .dcard .spart img {
-	width: 20px;
-	margin-left: 170px;
-	cursor: pointer;
-	/* transform: rotate(180deg); */
+  width: 20px;
+  margin-left: 0;                  /* remove big margin */
+  cursor: pointer;
 }
+
 
 .dcard:hover .fpart img{
 	transition: .8s ease;
 	transform: scale(1.2);
 }
+
+
 @media only screen and (max-width: 768px) {
   /* QUICK LINKS */
   .course {
@@ -327,7 +340,7 @@ body {
 
   .dcard .spart img {
     width: 20px;
-    margin-left: auto;
+    margin-left: 0;
     display: block;
   }
 }
@@ -417,7 +430,7 @@ body {
   }
 
   .click-me a {
-    font-size: 22px;
+    font-size: 12px;
     padding: 10px 20px;
     width: 100%;
     max-width: 280px;
