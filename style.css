@@ -489,6 +489,8 @@ button {
   padding-bottom: 150px;
   font-size: 50px;
   text-align: center;
+  justify-content: center;
+  align-items: center;
   color: #fff;
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)),
     url("images/extra/b1.jpg");
@@ -1348,6 +1350,8 @@ footer .right-col h1 {
   color: #ffffff;
   text-decoration: none;
   margin-left: 6px;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer-container p a:hover {
@@ -1669,10 +1673,18 @@ footer .btn:hover {
     margin: 10px 0;
   }
 
-  footer .footer-container {
-    flex-direction: column;
+    /* Center text inside left-col */
+  footer .left-col {
     text-align: center;
   }
+
+  /* Ensure contact links display in block format for better centering */
+  .footer-container p a {
+    display: block;
+    margin: 8px auto;
+    text-align: center;
+  }
+
 
   .social-media {
     justify-content: center;
