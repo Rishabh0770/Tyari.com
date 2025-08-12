@@ -1350,8 +1350,6 @@ footer .right-col h1 {
   color: #ffffff;
   text-decoration: none;
   margin-left: 6px;
-  align-items: center;
-  justify-content: center;
 }
 
 .footer-container p a:hover {
@@ -1499,6 +1497,33 @@ footer .btn:hover {
   }
 }
 
+
+/*For Responsive Website*/
+@media screen and (max-width: 960px) {
+	.footer-container {
+		max-width: 600px;
+	}
+	.right-col {
+		width: 100%;
+		margin-bottom: 60px;
+	}
+	.left-col {
+		width: 100%;
+		text-align: center;
+	}
+	.social-media {
+		display: flex;
+		justify-content: center;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	footer .btn{
+		margin: 0;
+		width: 100%;
+		margin-top: 20px;
+	}
+}
 /*PROPERTIES FOR MAKING WEBSITE RESPONSIVE*/
 /* === Small Devices (Phones) === */
 @media screen and (max-width: 576px) {
@@ -1604,20 +1629,6 @@ footer .btn:hover {
     font-size: 24px;
     margin-top: 20px;
   }
-
-  footer .newsletter-form {
-    flex-direction: column;
-  }
-
-  footer .txtb,
-  footer .btn {
-    width: 100%;
-    margin: 10px 0;
-  }
-
-  .developer {
-    font-size: 1rem;
-  }
 }
 
 /* ====== Responsive Fixes for Mobile ====== */
@@ -1671,23 +1682,6 @@ footer .btn:hover {
   .contact-form button {
     width: 100%;
     margin: 10px 0;
-  }
-
-    /* Center text inside left-col */
-  footer .left-col {
-    text-align: center;
-  }
-
-  /* Ensure contact links display in block format for better centering */
-  .footer-container p a {
-    display: block;
-    margin: 8px auto;
-    text-align: center;
-  }
-
-
-  .social-media {
-    justify-content: center;
   }
 }
 
