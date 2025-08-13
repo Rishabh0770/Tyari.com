@@ -1350,6 +1350,9 @@ footer .right-col h1 {
   color: #ffffff;
   text-decoration: none;
   margin-left: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .footer-container p a:hover {
