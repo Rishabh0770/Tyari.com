@@ -3,13 +3,24 @@
 	padding: 0;
 	font-family: sans-serif;
 }
-
+html{scroll-behavior: smooth;}
 body {
 	background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)),url("images/extra/backwallpaper.jpg");
 	background-size: cover;
 	background-attachment: fixed;
 	display: flex;
 	justify-content: center;
+}
+/*SCROLLBAR Styling*/
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: #8ab92d;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8ab92d; 
 }
 .logo {
 	display: flex;
